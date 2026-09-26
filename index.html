@@ -250,6 +250,14 @@
     .text-link{background:var(--teal-soft);color:#12565a}
     .delegation-photo{background:var(--tint)}
     .feature-method{color:#d3e0df;font-size:16px;line-height:1.6;margin:0 0 24px}
+    .speaking-card.featured-speaker{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);padding:0;overflow:hidden}
+    .speaker-photo{margin:0;background:var(--tint)}
+    .speaker-photo img{display:block;width:100%;height:100%;min-height:370px;aspect-ratio:4/3;object-fit:cover}
+    .speaker-copy{padding:clamp(30px,4vw,52px);align-self:center}
+    .speaker-copy .kicker{color:var(--teal);margin-bottom:14px}
+    .speaker-copy h3{font-size:clamp(27px,3vw,36px);line-height:1.2;margin-bottom:18px}
+    .speaker-copy>p:last-child{font-size:16px;line-height:1.7}
+    @media(max-width:850px){.speaking-card.featured-speaker{grid-template-columns:1fr}.speaker-photo img{height:auto;min-height:0}}
   </style>
   <script data-goatcounter="https://fariat14.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -433,10 +441,15 @@
           <p class="section-intro">I enjoy making technical work understandable and helping others find their path into analytics.</p>
         </div>
         <div class="speaking-grid">
-          <article class="speaking-card">
-            <p class="kicker">Invited guest speaker · Lubar College of Business</p>
-            <h3>Career journey and analytics</h3>
-            <p>Returned to Lubar College of Business as an invited guest speaker about a year and a half after studying there. I shared my career journey at Johnson Controls and practical advice with master's students.</p>
+          <article class="speaking-card featured-speaker">
+            <figure class="speaker-photo">
+              <img src="assets/uwm-guest-speaker.webp" alt="Faria T speaking in a Lubar College of Business classroom" width="1448" height="1086" loading="lazy">
+            </figure>
+            <div class="speaker-copy">
+              <p class="kicker">Invited guest speaker · Lubar College of Business</p>
+              <h3>Career journey and analytics</h3>
+              <p>Returned to Lubar College of Business as an invited guest speaker about a year and a half after studying there. I shared my career journey at Johnson Controls and practical advice with master's students.</p>
+            </div>
           </article>
           <article class="speaking-card">
             <p class="kicker">Graduate teaching · UW–Milwaukee</p>
