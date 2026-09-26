@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#102332">
   <meta name="color-scheme" content="light">
   <title>Faria T | Data &amp; AI Portfolio</title>
-  <meta name="description" content="Faria T is a data analyst connecting finance, business intelligence, and applied research. Explore interactive dashboards, modeling projects, writing, and speaking.">
+  <meta name="description" content="Faria T is a data analyst working across business intelligence, data science, finance transformation, and applied research. Explore dashboards, machine learning projects, writing, and speaking.">
   <link rel="canonical" href="https://fariat14.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Faria T">
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Selected analytics projects, experience, research, and writing.">
   <meta name="twitter:image" content="https://fariat14.github.io/Image_Faria.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","@id":"https://fariat14.github.io/#person","name":"Faria T","url":"https://fariat14.github.io/","image":"https://fariat14.github.io/Image_Faria.png","jobTitle":"Data Analyst","knowsAbout":["Business Intelligence","Finance Transformation","SQL","Snowflake","Power BI","Applied Economics"],"sameAs":["https://github.com/fariat14","https://medium.com/@t.fariajune","https://scholar.google.com/citations?user=nnatyWcAAAAJ"]}
+  {"@context":"https://schema.org","@type":"Person","@id":"https://fariat14.github.io/#person","name":"Faria T","url":"https://fariat14.github.io/","image":"https://fariat14.github.io/Image_Faria.png","jobTitle":"Data Analyst","knowsAbout":["Business Intelligence","Data Science","Machine Learning","Finance Transformation","SQL","Snowflake","Power BI","Applied Economics"],"sameAs":["https://github.com/fariat14","https://medium.com/@t.fariajune","https://scholar.google.com/citations?user=nnatyWcAAAAJ"]}
   </script>
   <style>
     :root{--navy:#102332;--navy2:#19394a;--ink:#182b36;--muted:#53636b;--paper:#f6f5f1;--white:#fff;--line:#d8dfdd;--teal:#207f82;--gold:#b58a58}
@@ -221,6 +221,11 @@
     .impact-grid strong{display:block;font:normal 36px/1.1 Georgia,serif;color:#1a4650}
     .impact-grid span{display:block;margin-top:7px;color:#4b6266;font-size:14px;line-height:1.4}
     @media(max-width:620px){.impact-grid{grid-template-columns:1fr 1fr}.impact-grid>div{padding:18px 12px;border-bottom:1px solid #cbd8d5}.impact-grid>div:first-child{padding-left:0}.impact-grid>div:nth-child(2){border-right:0}.impact-grid>div:last-child{grid-column:span 2;border-bottom:0;padding-left:0}}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .skill-group{padding:30px;background:#fff;border:1px solid var(--line);border-radius:10px}
+    .skill-group h3{font-family:Georgia,serif;font-size:24px;color:var(--navy2);margin-bottom:16px}
+    .skill-group p{color:#3e515a;font-size:16px;line-height:1.9;margin:0}
+    @media(max-width:850px){.skills-grid{grid-template-columns:1fr}}
   </style>
   <script data-goatcounter="https://fariat14.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -230,7 +235,7 @@
     <nav class="nav wrap" aria-label="Primary navigation">
       <a class="brand" href="#main-content">Faria <span>T</span></a>
       <div class="nav-links">
-        <a href="#about">About</a><a href="#projects">Projects</a><a href="#work">Experience</a><a href="#speaking">Speaking</a>
+        <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#speaking">Speaking</a>
         <a href="#writing">Writing</a><a href="#recognition">Awards</a><a class="nav-contact" href="#contact">Contact</a>
       </div>
     </nav>
@@ -259,7 +264,7 @@
     <div class="impact-strip" aria-label="Selected numbers">
       <div class="wrap impact-grid">
         <div><strong>11K+</strong><span>LinkedIn followers</span></div>
-        <div><strong>150+</strong><span>students supported through graduate teaching</span></div>
+        <div><strong>450+</strong><span>students supported through graduate teaching</span></div>
         <div><strong>~80%</strong><span>less processing time from an approval process redesign</span></div>
       </div>
     </div>
@@ -347,6 +352,20 @@
       </div>
     </section>
 
+    <section id="skills" class="dark-band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Skills &amp; methods</p><h2>My analytical toolkit</h2></div>
+          <p class="section-intro">Tools I use in professional work, with modeling methods drawn from research and public projects.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group"><h3>Business intelligence &amp; data</h3><p>SQL · Snowflake · Power BI · Tableau · Excel Power Query &amp; VBA · Azure Data Factory</p></div>
+          <div class="skill-group"><h3>Data science &amp; machine learning</h3><p>Python · pandas · NumPy · R · Stata · regression · random forest · time series analysis · model evaluation</p></div>
+          <div class="skill-group"><h3>Enterprise analytics</h3><p>Dimensional data modeling · source-to-target mapping · data quality &amp; validation · Oracle Fusion · SAP S/4HANA · OneStream</p></div>
+        </div>
+      </div>
+    </section>
+
     <section id="work" class="dark-band">
       <div class="wrap">
         <div class="section-head">
@@ -397,7 +416,7 @@
           <article class="speaking-card">
             <p class="kicker">Graduate teaching · UW–Milwaukee</p>
             <h3>Statistical Modeling in Business Analytics</h3>
-            <p>Led course discussions for more than 150 students across BUS ADM 210 and 211, helping them apply Excel, R, and statistical analysis to business questions.</p>
+            <p>Supported more than 450 students across BUS ADM 210 and 211, helping them apply Excel, R, and statistical analysis to business questions.</p>
           </article>
           <article class="speaking-card">
             <p class="kicker">Career mentoring · JCI Dhaka West</p>
