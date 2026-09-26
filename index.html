@@ -239,6 +239,17 @@
     .skill-group h3{font-family:Georgia,serif;font-size:24px;color:var(--navy2);margin-bottom:16px}
     .skill-group p{color:#3e515a;font-size:16px;line-height:1.9;margin:0}
     @media(max-width:850px){.skills-grid{grid-template-columns:1fr}}
+    /* A consistent navy, teal, gold, and ivory palette across sections */
+    :root{--tint:#eaf1ee;--gold-soft:#e8c69b;--teal-soft:#e1efeb}
+    .dark-band,.impact-strip,.work-summary,.more-work{background:var(--tint)}
+    #work,#writing{background:var(--paper)}
+    #recognition{background:var(--tint)}
+    .button.primary{background:var(--gold-soft);border-color:var(--gold-soft)}
+    .feature-detail{border-left-color:var(--gold)}
+    .feature-detail strong,.metric strong{color:var(--gold-soft)}
+    .text-link{background:var(--teal-soft);color:#12565a}
+    .delegation-photo{background:var(--tint)}
+    .feature-method{color:#d3e0df;font-size:16px;line-height:1.6;margin:0 0 24px}
   </style>
   <script data-goatcounter="https://fariat14.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -308,6 +319,7 @@
             <h3>NYC Airbnb Dashboard</h3>
             <div class="feature-detail"><strong>Question</strong><span>How do listings, prices, and availability differ across New York City?</span></div>
             <div class="feature-detail"><strong>What I built</strong><span>An interactive view of listings, neighborhood prices, room types, reviews, and availability.</span></div>
+            <p class="feature-method">I used ChatGPT to explore analytical questions and refine the story, then validated the findings against the data.</p>
             <a class="button primary" href="https://frolicking-sprite-252ef8.netlify.app/" target="_blank" rel="noopener noreferrer">Explore live dashboard ↗</a>
           </div>
           <div class="feature-aside" aria-label="NYC Airbnb dashboard highlights">
@@ -424,7 +436,7 @@
           <article class="speaking-card">
             <p class="kicker">Invited guest speaker · Lubar College of Business</p>
             <h3>Career journey and analytics</h3>
-            <p>Spoke with master's students at the University of Wisconsin–Milwaukee about my career journey and work at Johnson Controls, with practical advice on entering analytics and finance.</p>
+            <p>Returned to Lubar College of Business as an invited guest speaker about a year and a half after studying there. I shared my career journey at Johnson Controls and practical advice with master's students.</p>
           </article>
           <article class="speaking-card">
             <p class="kicker">Graduate teaching · UW–Milwaukee</p>
