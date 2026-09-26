@@ -98,11 +98,19 @@
     .more-work h3{font-family:Georgia,serif;font-size:23px;margin-bottom:14px}
     .more-links{display:flex;flex-wrap:wrap;gap:10px 28px}
     .more-links a{color:#146c70;font-size:14px;font-weight:700;text-underline-offset:4px}
-    .article-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .article-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .article{padding:26px}
     .article h3{font-family:Georgia,serif;font-size:21px}
     .article a{text-decoration:none}
     .article a:hover{text-decoration:underline}
+    .recognition-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .recognition-card{padding:25px;background:#fff;border:1px solid var(--line)}
+    .recognition-card h3{font-family:Georgia,serif;font-size:21px}
+    .recognition-card p{color:var(--muted);margin:0;font-size:14px}
+    .speaking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .speaking-card{padding:30px;background:#fff;border:1px solid var(--line)}
+    .speaking-card h3{font-family:Georgia,serif;font-size:24px}
+    .speaking-card p{color:var(--muted);margin:0}
     .education-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
     .education-item{padding:25px}
     .education-item strong{display:block;color:var(--navy);font-size:18px;line-height:1.35}
@@ -122,7 +130,7 @@
       .metric{border:0;border-right:1px solid #47606a;padding:0 14px 0 0}
       .metric:last-child{border:0}
       .about-grid{gap:34px}
-      .article-list,.education-list{grid-template-columns:1fr 1fr}
+      .article-list,.education-list,.recognition-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:620px){
       .wrap{width:min(100% - 32px,1160px)}
@@ -136,7 +144,7 @@
       main section{padding:66px 0}
       .section-head,.contact-inner{display:block}
       .section-intro{margin-top:18px}
-      .about-grid,.work-grid,.project-grid,.article-list,.education-list{grid-template-columns:1fr}
+      .about-grid,.work-grid,.project-grid,.article-list,.education-list,.speaking-grid,.recognition-grid{grid-template-columns:1fr}
       .featured .feature-aside{grid-template-columns:1fr;gap:12px}
       .metric{border-right:0;border-bottom:1px solid #47606a;padding:0 0 12px}
       .contact .actions{justify-content:flex-start;margin-top:24px}
@@ -151,7 +159,9 @@
     <nav class="nav wrap" aria-label="Primary navigation">
       <a class="brand" href="#top">Faria <span>T</span></a>
       <div class="nav-links">
-        <a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#writing">Writing</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact</a>
+        <a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#speaking">Speaking</a>
+        <a href="#recognition">Awards</a>
+        <a href="#writing">Writing</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -183,7 +193,7 @@
         </div>
         <div class="about-copy">
           <p>I'm a data and analytics professional at Johnson Controls, where I support finance transformation through source-to-target mapping, SQL validation, and collaboration across finance and technology teams.</p>
-          <p>My earlier work spans pricing analytics, executive reporting, and applied economics research. I bring those perspectives together to make data useful to the people making decisions.</p>
+          <p>My earlier work spans pricing analytics, executive reporting, graduate teaching, and applied economics research. I bring those perspectives together to make data useful to the people making decisions.</p>
           <p>I work with Snowflake SQL, Power BI, Azure Data Factory, Python, and enterprise data platforms. Beyond analytics, I write about innovation, economic development, and technology.</p>
         </div>
       </div>
@@ -201,8 +211,8 @@
             <h3>Data Analyst, Global Products OTC Finance</h3>
             <p>Supporting enterprise data mapping and validation across ERP systems and downstream analytics.</p>
             <ul>
-              <li>Map source fields and transformation rules across Oracle Fusion, SAP S/4HANA, and other ERP systems.</li>
-              <li>Validate Snowflake data and work with finance and implementation teams to resolve defects.</li>
+              <li>Map source fields and transformation rules across Oracle Fusion, SAP S/4HANA, and other ERP systems into the Snowflake Enterprise Data Model.</li>
+              <li>Validate Snowflake data through SQL, system integration testing, and user acceptance testing; coordinate defect resolution with finance and engineering teams.</li>
             </ul>
           </article>
           <article class="work-card">
@@ -210,14 +220,14 @@
             <h3>Analytics and executive reporting</h3>
             <p>Worked across controllership and central pricing to improve visibility into business performance.</p>
             <ul>
-              <li>Supported pricing dashboards, scorecards, and executive reporting.</li>
-              <li>Combined financial analysis with Power BI, Excel, OneStream, and enterprise reporting workflows.</li>
+              <li>Supported pricing dashboards, scorecards, and monthly reporting for Executive Committee review.</li>
+              <li>Combined financial analysis with Power BI, Excel, OneStream, and enterprise reporting workflows; built a reserve approval process that cut processing time by approximately 80%.</li>
             </ul>
           </article>
           <article class="work-card">
             <p class="meta">Earlier experience</p>
             <h3>Research and market analytics</h3>
-            <p>Built a quantitative foundation through applied research, market analysis, and graduate teaching, including work with IPAG and Nielsen.</p>
+            <p>Conducted applied research at IPAG and North Dakota State University, analyzed consumer markets at Nielsen, and taught statistical modeling in business analytics at UW–Milwaukee.</p>
           </article>
           <article class="work-card">
             <p class="meta">How I work</p>
@@ -302,13 +312,60 @@
       </div>
     </section>
 
+    <section id="speaking" class="dark-band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Speaking &amp; community</p><h2>Sharing what I learn</h2></div>
+          <p class="section-intro">Teaching, mentoring, and conversations that connect analytics with real careers.</p>
+        </div>
+        <div class="speaking-grid">
+          <article class="speaking-card">
+            <p class="kicker">Invited guest speaker · Lubar College of Business</p>
+            <h3>Career journey and analytics</h3>
+            <p>Spoke with master's students at the University of Wisconsin–Milwaukee about my career journey and work at Johnson Controls, with practical advice on entering analytics and finance.</p>
+          </article>
+          <article class="speaking-card">
+            <p class="kicker">Graduate teaching · UW–Milwaukee</p>
+            <h3>Statistical Modeling in Business Analytics</h3>
+            <p>Led course discussions for more than 150 students across BUS ADM 210 and 211, helping them apply Excel, R, and statistical analysis to business questions.</p>
+          </article>
+          <article class="speaking-card">
+            <p class="kicker">Career mentoring · JCI Dhaka West</p>
+            <h3>Project Student Connect</h3>
+            <p>Co-led training for students and recent graduates in professional skills, CV preparation, and interview practice, working with companies to connect applicants with opportunities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recognition">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Recognition</p><h2>Awards &amp; honors</h2></div>
+        </div>
+        <div class="recognition-grid">
+          <article class="recognition-card"><h3>Chancellor's Graduate Student Award</h3><p>University of Wisconsin–Milwaukee</p></article>
+          <article class="recognition-card"><h3>Gold Star Teaching Award</h3><p>Lubar College of Business · Spring 2023</p></article>
+          <article class="recognition-card"><h3>Business Ethics Case Competition</h3><p>Runner-up · Lubar College of Business · 2023</p></article>
+          <article class="recognition-card"><h3>President's Award</h3><p>JCI Dhaka West · Project Student Connect contribution</p></article>
+          <article class="recognition-card"><h3>Clifford M. &amp; Ruth M. Altermatt Scholarship</h3><p>North Dakota State University · 2021</p></article>
+          <article class="recognition-card"><h3>Frank Bain Graduate Scholarship</h3><p>North Dakota State University · 2021</p></article>
+        </div>
+      </div>
+    </section>
+
     <section id="writing" class="dark-band">
       <div class="wrap">
         <div class="section-head">
           <div><p class="kicker">Research &amp; writing</p><h2>Ideas beyond the dashboard</h2></div>
-          <p class="section-intro">Research and public writing on innovation, economics, education, and sustainability.</p>
+          <p class="section-intro">Research and public writing on innovation, economics, education, sustainability, and the ideas that shape everyday life.</p>
         </div>
         <div class="article-list">
+          <article class="article">
+            <p class="meta">Medium · Books and ideas</p>
+            <h3><a href="https://medium.com/@t.fariajune/if-i-were-to-recommend-10-books-for-someone-to-read-what-would-they-be-d95a32e9427c" target="_blank" rel="noopener noreferrer">If I Were to Recommend 10 Books ↗</a></h3>
+            <p>A reading list on economics, human behavior, and business.</p>
+          </article>
           <article class="article">
             <p class="meta">The Business Standard · Innovation</p>
             <h3><a href="https://www.tbsnews.net/thoughts/unleashing-power-innovation-bangladesh-622686" target="_blank" rel="noopener noreferrer">Unleashing the Power of Innovation in Bangladesh ↗</a></h3>
