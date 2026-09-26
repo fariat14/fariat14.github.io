@@ -82,6 +82,16 @@
     .featured h3{font-family:Georgia,serif;font-size:clamp(28px,3vw,38px);margin-bottom:16px}
     .featured p{color:#d3e0df;font-size:17px;margin-bottom:22px}
     .featured .feature-aside{border-left:1px solid #47606a;padding:clamp(30px,5vw,60px);display:flex;flex-direction:column;justify-content:center;gap:20px}
+    .feature-detail{padding-left:18px;border-left:2px solid #e5c49a;margin:0 0 22px}
+    .feature-detail strong{display:block;color:#e5c49a;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+    .feature-detail span{color:#e0e9e8;font-size:15px}
+    .project-card .project-question{font-family:Georgia,serif;color:#23404a;font-size:18px;margin:10px 0 16px}
+    .project-card .project-detail{font-size:14px;line-height:1.6;border-top:1px solid var(--line);padding-top:13px;margin-top:16px}
+    .project-detail strong{color:#1b555a}
+    .work-summary{margin-top:34px;padding:30px;background:#e9eeeb;border-left:3px solid var(--teal)}
+    .work-summary h3{font-family:Georgia,serif;margin-bottom:8px}
+    .work-summary p{color:#3e515a;margin-bottom:0}
+    .hero-note{color:#a8d8d4;font-size:14px;margin:22px 0 0}
     .metric{border-bottom:1px solid #47606a;padding-bottom:18px}
     .metric:last-child{border:0;padding:0}
     .metric strong{display:block;color:#e5c49a;font-family:Georgia,serif;font-size:24px;font-weight:normal}
@@ -90,7 +100,9 @@
     .dashboard-preview{display:block;width:100%;height:305px;border:0;background:#e9eeeb;pointer-events:none}
     .project-preview{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#edf1ef;border:1px solid var(--line);margin:0 0 22px}
     .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .project-card{padding:30px;position:relative}
+    .project-card{padding:30px;position:relative;transition:border-color .2s,box-shadow .2s,transform .2s}
+    .project-card:hover{transform:translateY(-3px)}
+    .project-card:before{content:"";display:block;width:42px;height:3px;background:var(--gold);margin-bottom:22px}
     .project-card:has(.text-link):hover{border-color:#87b9b2;box-shadow:0 12px 30px rgba(16,35,50,.09)}
     .project-card:has(.text-link):focus-within{outline:3px solid #87b9b2;outline-offset:3px}
     .project-card h3{font-family:Georgia,serif;font-size:24px}
@@ -157,7 +169,7 @@
       .contact .actions{justify-content:flex-start;margin-top:24px}
       footer .wrap{display:block}
     }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.project-card{transition:none}.button:hover,.project-card:hover{transform:none}}
   </style>
   <script data-goatcounter="https://fariat14.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -179,13 +191,14 @@
         <div>
           <p class="eyebrow">Data &amp; AI · Business Intelligence · Finance</p>
           <h1>Faria T</h1>
-          <p class="lead">I turn complex data into clear decisions.</p>
-          <p class="summary">At Johnson Controls, I connect finance requirements, enterprise data, and validation. My public projects span dashboards, predictive modeling, and economic research.</p>
+          <p class="lead">I make complex data useful for real decisions.</p>
+          <p class="summary">I'm a data analyst with a background in economics and business analytics. At Johnson Controls, I connect finance requirements with enterprise data; outside work, I build dashboards and explore questions through research and modeling.</p>
           <div class="actions">
             <a class="button primary" href="#projects">Explore my work</a>
             <a class="button ghost" href="https://github.com/fariat14" target="_blank" rel="noopener noreferrer">GitHub projects ↗</a>
             <a class="button ghost" href="https://www.linkedin.com/in/fariatabassumecon/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
+          <p class="hero-note">SQL · Snowflake · Power BI · Python · Tableau</p>
         </div>
         <div class="portrait-frame">
           <img src="Image_Faria.png" alt="Portrait of Faria T" width="520" height="620">
@@ -201,7 +214,7 @@
           <div class="about-line">Business context meets technical depth.</div>
         </div>
         <div class="about-copy">
-          <p>I'm a data and analytics professional at Johnson Controls, where I support finance transformation through source-to-target mapping, SQL validation, and collaboration across finance and technology teams.</p>
+          <p>I like the point where a business question meets messy data. At Johnson Controls, I support finance transformation through source-to-target mapping, SQL validation, and collaboration across finance and technology teams.</p>
           <p>My earlier work spans pricing analytics, executive reporting, graduate teaching, and applied economics research. I bring those perspectives together to make data useful to the people making decisions.</p>
           <p>I work with Snowflake SQL, Power BI, Azure Data Factory, Python, and enterprise data platforms. Beyond analytics, I write about innovation, economic development, and technology.</p>
         </div>
@@ -212,7 +225,7 @@
       <div class="wrap">
         <div class="section-head">
           <div><p class="kicker">Experience</p><h2>Selected work</h2></div>
-          <p class="section-intro">A foundation in business and economics, applied to complex data and reporting challenges.</p>
+          <p class="section-intro">A foundation in economics and business analytics, applied to data quality, reporting, and stakeholder decisions.</p>
         </div>
         <div class="work-grid">
           <article class="work-card">
@@ -251,13 +264,14 @@
       <div class="wrap">
         <div class="section-head">
           <div><p class="kicker">Portfolio</p><h2>Projects &amp; selected work</h2></div>
-          <p class="section-intro">Public dashboards, model development, research documentation, and selected professional work.</p>
+          <p class="section-intro">A closer look at the questions I explored, the methods I used, and what you can open for yourself.</p>
         </div>
         <article class="featured">
           <div class="feature-copy">
             <p class="meta">Featured project · Interactive dashboard</p>
             <h3>NYC Airbnb Dashboard</h3>
-            <p>Explore New York City listings by neighborhood, room type, price, availability, and reviews through an interactive view of Airbnb data.</p>
+            <div class="feature-detail"><strong>Question</strong><span>How do listings, prices, and availability differ across New York City?</span></div>
+            <div class="feature-detail"><strong>Approach</strong><span>An interactive dashboard lets visitors compare neighborhoods and room types, then inspect review and availability patterns.</span></div>
             <a class="button primary" href="https://frolicking-sprite-252ef8.netlify.app/" target="_blank" rel="noopener noreferrer">Explore live dashboard ↗</a>
           </div>
           <div class="feature-aside" aria-label="Interactive preview of the NYC Airbnb dashboard">
@@ -267,24 +281,11 @@
         </article>
         <div class="project-grid">
           <article class="project-card">
-            <p class="meta">Enterprise data · Johnson Controls</p>
-            <h3>Finance transformation data mapping</h3>
-            <p>Supported source-to-target mapping, validation, and defect resolution for enterprise finance data flowing from ERP systems into analytics layers.</p>
-            <div class="stack"><span>Snowflake SQL</span><span>STTM</span><span>ERP data</span></div>
-            <p class="note">Professional work described at a high level.</p>
-          </article>
-          <article class="project-card">
-            <p class="meta">Business intelligence · Johnson Controls</p>
-            <h3>Pricing and performance reporting</h3>
-            <p>Built and supported scorecards and executive reporting to track pricing and business performance.</p>
-            <div class="stack"><span>Power BI</span><span>Finance</span><span>Reporting</span></div>
-            <p class="note">Professional work described at a high level.</p>
-          </article>
-          <article class="project-card">
             <img class="project-preview" src="assets/netflix-tableau.png" alt="Preview of the Netflix Tableau dashboard with a map, charts, and content breakdowns" loading="lazy" width="720" height="540">
             <p class="meta">Data visualization</p>
             <h3>Netflix content analysis</h3>
-            <p>A Tableau dashboard exploring content categories and release patterns.</p>
+            <p class="project-question">What does the Netflix catalog reveal about its mix of titles?</p>
+            <p>I organized catalog attributes into a Tableau view that makes categories and release patterns easier to compare.</p>
             <div class="stack"><span>Tableau</span><span>Exploratory analysis</span></div>
             <a class="text-link" href="https://public.tableau.com/views/NetflixDashboard_17166085114810/Netflix?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener noreferrer">View Tableau dashboard ↗</a>
           </article>
@@ -292,25 +293,30 @@
             <img class="project-preview" src="assets/citibike-tableau.png" alt="Preview of the Citi Bike Tableau dashboard with station maps and trip charts" loading="lazy" width="720" height="540">
             <p class="meta">Urban analytics</p>
             <h3>Citi Bike trips analysis</h3>
-            <p>Explored rider behavior, usage patterns, and station-level trends in trip data.</p>
+            <p class="project-question">How do New Yorkers use Citi Bike across stations and trips?</p>
+            <p>I visualized trip and station data to make usage patterns easier to explore across the city.</p>
             <div class="stack"><span>Tableau</span><span>Transportation data</span></div>
             <a class="text-link" href="https://public.tableau.com/views/citibiketrips_15935502394800/Feb2018?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener noreferrer">View Tableau dashboard ↗</a>
           </article>
           <article class="project-card">
             <p class="meta">Predictive modeling · GitHub</p>
             <h3>2026 World Cup forecast</h3>
-            <p>Replayed historical international matches to create Elo ratings, then used logistic regression to estimate match outcomes. The project documents its assumptions, evaluation, and forecast updates.</p>
+            <p class="project-question">Can historical match results produce a useful World Cup forecast?</p>
+            <p>I replayed international matches to build Elo ratings and used logistic regression for match probabilities. The repository includes evaluation, limits, and dated forecast updates.</p>
             <div class="stack"><span>Python</span><span>Logistic regression</span><span>Model evaluation</span></div>
             <a class="text-link" href="https://github.com/fariat14/world-cup-2026-forecast" target="_blank" rel="noopener noreferrer">Read project and code ↗</a>
           </article>
           <article class="project-card">
             <p class="meta">Research design · GitHub</p>
             <h3>Firm innovation in Bangladesh</h3>
-            <p>A research write-up on potential drivers of firm innovation in Bangladesh using World Bank Enterprise Survey data. The public repository presents the method and reported findings.</p>
+            <p class="project-question">Which firm capabilities are associated with innovation in Bangladesh?</p>
+            <p>A research write-up using World Bank Enterprise Survey data to examine finance, workforce, technology, and institutional factors.</p>
+            <p class="project-detail"><strong>What to open:</strong> Method and reported findings. The public repository is documentation, not a reproducible code release.</p>
             <div class="stack"><span>Applied economics</span><span>Machine learning</span><span>Research</span></div>
             <a class="text-link" href="https://github.com/fariat14/bangladesh-innovation-ml" target="_blank" rel="noopener noreferrer">Read project documentation ↗</a>
           </article>
         </div>
+        <div class="work-summary"><h3>Enterprise work, in context</h3><p>My Johnson Controls work includes finance data mapping, SQL validation, pricing analytics, and executive reporting. Those projects are described at a high level because the underlying systems and data are company-owned.</p></div>
         <div class="more-work">
           <h3>More published work</h3>
           <div class="more-links">
