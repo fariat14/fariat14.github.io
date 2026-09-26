@@ -250,6 +250,17 @@
     .text-link{background:var(--teal-soft);color:#12565a}
     .delegation-photo{background:var(--tint)}
     .feature-method{color:#d3e0df;font-size:16px;line-height:1.6;margin:0 0 24px}
+    #teaching{background:var(--paper)}
+    .teaching-feature{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.5fr);background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .teaching-copy{padding:clamp(28px,4vw,52px)}
+    .teaching-copy h3{font-family:Georgia,serif;font-size:clamp(26px,3vw,36px);margin-bottom:18px}
+    .teaching-copy p:not(.kicker){font-size:16px;line-height:1.7;color:#3e515a;max-width:650px}
+    .teaching-copy .teaching-award{margin:22px 0 0}
+    .teaching-award a{color:#12565a;text-underline-offset:3px}
+    .teaching-impact{background:var(--navy2);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,4vw,52px)}
+    .teaching-impact strong{font:normal clamp(54px,7vw,88px)/1 Georgia,serif;color:var(--gold-soft)}
+    .teaching-impact span{font-size:17px;line-height:1.5;margin-top:14px;max-width:220px}
+    @media(max-width:620px){.teaching-feature{grid-template-columns:1fr}.teaching-impact{padding:28px}.teaching-impact strong{font-size:54px}}
     .speaking-card.featured-speaker{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);padding:0;overflow:hidden}
     .speaker-photo{margin:0;background:var(--tint)}
     .speaker-photo img{display:block;width:100%;height:100%;min-height:370px;aspect-ratio:4/3;object-fit:cover}
@@ -268,6 +279,7 @@
       <a class="brand" href="#main-content">Faria <span>T</span></a>
       <div class="nav-links">
         <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#speaking">Speaking</a>
+        <a href="#teaching">Teaching</a>
         <a href="#writing">Writing</a><a href="#recognition">Recognition</a><a class="nav-contact" href="#contact">Contact</a>
       </div>
     </nav>
@@ -427,7 +439,7 @@
           <article class="work-card">
             <p class="meta">Earlier experience</p>
             <h3>Research and market analytics</h3>
-            <p>Conducted applied research at IPAG and North Dakota State University, analyzed consumer markets at Nielsen, and taught statistical modeling in business analytics at UW–Milwaukee.</p>
+            <p>Conducted applied research at IPAG and North Dakota State University, analyzed consumer markets at Nielsen, and conducted research at UW–Milwaukee.</p>
           </article>
 
         </div>
@@ -452,15 +464,28 @@
             </div>
           </article>
           <article class="speaking-card">
-            <p class="kicker">Graduate teaching · UW–Milwaukee</p>
-            <h3>Statistical Modeling in Business Analytics</h3>
-            <p>Supported more than 450 students across BUS ADM 210 and 211, helping them apply Excel, R, and statistical analysis to business questions.</p>
-          </article>
-          <article class="speaking-card">
             <p class="kicker">Career mentoring · JCI Dhaka West</p>
             <h3>Project Student Connect</h3>
             <p>Co-led training for students and recent graduates in professional skills, CV preparation, and interview practice, working with companies to connect applicants with opportunities.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Graduate teaching · UW–Milwaukee</p><h2>Teaching experience</h2></div>
+          <p class="section-intro">Helping students build confidence with statistics and apply analytical tools to business questions.</p>
+        </div>
+        <div class="teaching-feature">
+          <div class="teaching-copy">
+            <p class="kicker">Lubar College of Business</p>
+            <h3>Statistical Modeling in Business Analytics</h3>
+            <p>As a graduate teaching assistant for BUS ADM 210 and 211, I supported students learning statistical modeling, Excel, and R. I helped them work through analytical concepts and use data to answer business questions.</p>
+            <p class="teaching-award">Recognized with the <a href="#recognition">Gold Star Teaching Award</a> in Spring 2023.</p>
+          </div>
+          <div class="teaching-impact"><strong>450+</strong><span>students supported across the two courses</span></div>
         </div>
       </div>
     </section>
