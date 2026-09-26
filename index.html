@@ -221,6 +221,18 @@
     .impact-grid strong{display:block;font:normal 36px/1.1 Georgia,serif;color:#1a4650}
     .impact-grid span{display:block;margin-top:7px;color:#4b6266;font-size:14px;line-height:1.4}
     @media(max-width:620px){.impact-grid{grid-template-columns:1fr 1fr}.impact-grid>div{padding:18px 12px;border-bottom:1px solid #cbd8d5}.impact-grid>div:first-child{padding-left:0}.impact-grid>div:nth-child(2){border-right:0}.impact-grid>div:last-child{grid-column:span 2;border-bottom:0;padding-left:0}}
+
+    .delegation-feature{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:24px}
+    .delegation-photo{margin:0;background:#dfe8e5;display:flex;flex-direction:column}
+    .delegation-photo img{display:block;width:100%;height:100%;min-height:365px;object-fit:cover}
+    .delegation-photo figcaption{padding:10px 18px;background:#fff;color:var(--muted);font-size:13px;line-height:1.45}
+    .delegation-copy{padding:clamp(28px,4vw,52px);align-self:center}
+    .delegation-copy .kicker{color:var(--teal);margin-bottom:15px}
+    .delegation-copy h3{font-family:Georgia,serif;font-size:clamp(27px,3vw,38px);line-height:1.2;margin-bottom:20px}
+    .delegation-copy p{color:#3e515a;font-size:16px;line-height:1.7}
+    .delegation-copy .delegation-sources{font-size:14px;margin:24px 0 0}
+    .delegation-sources a{color:#12565a;text-decoration-thickness:1px;text-underline-offset:3px}
+    @media(max-width:850px){.delegation-feature{grid-template-columns:1fr}.delegation-photo img{min-height:0;aspect-ratio:1024/643}}
     .skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
     .skill-group{padding:30px;background:#fff;border:1px solid var(--line);border-radius:10px}
     .skill-group h3{font-family:Georgia,serif;font-size:24px;color:var(--navy2);margin-bottom:16px}
@@ -236,7 +248,7 @@
       <a class="brand" href="#main-content">Faria <span>T</span></a>
       <div class="nav-links">
         <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#speaking">Speaking</a>
-        <a href="#writing">Writing</a><a href="#recognition">Awards</a><a class="nav-contact" href="#contact">Contact</a>
+        <a href="#writing">Writing</a><a href="#recognition">Recognition</a><a class="nav-contact" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -467,8 +479,21 @@
     <section id="recognition">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="kicker">Recognition</p><h2>Awards &amp; honors</h2></div>
+          <div><p class="kicker">Recognition</p><h2>Recognition &amp; exchange</h2></div>
         </div>
+        <article class="delegation-feature">
+          <figure class="delegation-photo">
+            <img src="assets/bangladesh-youth-delegation-2018.webp" alt="Members of the 2018 Bangladesh Youth Delegation with Indian Prime Minister Narendra Modi" width="1024" height="643" loading="lazy">
+            <figcaption>With fellow delegates and Prime Minister Narendra Modi in New Delhi, 2018.</figcaption>
+          </figure>
+          <div class="delegation-copy">
+            <p class="kicker">Selected delegate · Bangladesh to India · 2018</p>
+            <h3>One of 100 young delegates representing Bangladesh</h3>
+            <p>I was selected for the 100-member Bangladesh Youth Delegation to India, an international exchange organized by the High Commission of India in Dhaka. Over eight days in New Delhi, Agra, and Mumbai, we met Indian leaders, including Prime Minister Narendra Modi and External Affairs Minister Sushma Swaraj, and visited educational, technology, and industry institutions.</p>
+            <p>Seeing manufacturing and operations up close at Mahindra’s Chakan plant expanded how I think about the connection between data, business, and real-world decisions.</p>
+            <p class="delegation-sources"><a href="https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1555315&amp;lang=2&amp;reg=48" target="_blank" rel="noopener noreferrer">Government of India program record ↗</a> · <a href="https://www.thedailystar.net/world/south-asia/india/bangladesh-youth-delegation-meets-indian-prime-minister-narendra-modi-in-new-delhi-1554571" target="_blank" rel="noopener noreferrer">2018 coverage ↗</a></p>
+          </div>
+        </article>
         <div class="recognition-grid">
           <article class="recognition-card"><h3>Chancellor's Graduate Student Award</h3><p>University of Wisconsin–Milwaukee</p></article>
           <article class="recognition-card"><h3>Gold Star Teaching Award</h3><p>Lubar College of Business · Spring 2023</p></article>
