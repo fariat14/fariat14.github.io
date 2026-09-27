@@ -289,7 +289,13 @@
   .portrait-frame{width:min(100%,360px);aspect-ratio:1;border-radius:50%;overflow:hidden}
   .portrait-frame img{width:100%;height:100%;max-height:none;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 22%;box-shadow:none;filter:none}
   @media(max-width:620px){.portrait-frame{justify-self:center;width:min(82%,310px)}}
-  </style>
+  
+    .timeline-entry{position:relative;padding-left:92px;min-height:90px}
+    .timeline-mark,.timeline-logo{position:absolute;left:20px;top:20px;width:54px;height:54px;border-radius:9px}
+    .timeline-mark{display:grid;place-items:center;background:#f1e9e2;color:#74404d;font-size:13px;font-weight:800;letter-spacing:.03em}
+    .timeline-logo{display:block;object-fit:contain;background:#fff;padding:5px;border:1px solid #e9dfd9}
+    @media(max-width:640px){.timeline-entry{padding-left:76px}.timeline-mark,.timeline-logo{left:14px;width:46px;height:46px}}
+</style>
   <script data-goatcounter="https://fariat14.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -354,7 +360,7 @@
     <section id="projects">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="kicker">Public projects</p><h2>Projects</h2></div>
+          <div><p class="kicker">Featured Work</p><h2>Projects &amp; Portfolio</h2></div>
           <p class="section-intro">Public projects with documented methods and code.</p>
         </div>
 
@@ -430,41 +436,41 @@
         <ol class="career-timeline">
           <li>
             <span class="timeline-date">2025–present</span>
-            <div class="timeline-entry"><p class="timeline-org">Johnson Controls · Global Finance Transformation</p><h4>Data Analyst</h4>
-              <p>Map 8 ERP environments into Snowflake and validate 264 source-to-target mappings. Build Order-to-Cash fact and dimension models and maintain consistent finance metrics in the semantic layer.</p>
-              <p>Built 3 reusable Cortex Code skills for mapping validation, SIT, and data quality. Use Snowflake SQL to investigate defects with finance, engineering, and external teams.</p>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">JCI</span><img class="timeline-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Johnson_Controls.svg" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">Johnson Controls · Global Finance Transformation</p><h4>Data Analyst</h4>
+              <p>I work on an enterprise finance data modernization program that brings data from legacy ERP environments into a common Snowflake Enterprise Data Model. I define source-to-target mappings across 8 ERP environments and validate 264 mappings so finance measures have consistent definitions.</p>
+              <p>I support Order-to-Cash fact and dimension models, SIT and UAT, and defect resolution with finance and engineering teams. I built 3 reusable Cortex Code skills for mapping validation and data quality checks, reducing validation from 3–4 hours to about 30 minutes.</p>
             </div>
           </li>
           <li>
             <span class="timeline-date">2022–2025</span>
-            <div class="timeline-entry"><p class="timeline-org">Johnson Controls · Finance</p><h4>Financial Analyst</h4>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">JCI</span><img class="timeline-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Johnson_Controls.svg" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">Johnson Controls · Finance</p><h4>Financial Analyst</h4>
               <p>Worked across State Tax, Treasury, Controllership, Pricing, and BSNA Canada FP&amp;A. Analyzed P&amp;L, cash flow, forecasts, manufacturing costs, and KPIs, including full P&amp;L analysis for an approximately $850 million region with 2,500 employees.</p>
               <p>Prepared Executive Committee pricing reports and analyzed price realization and margins. Cut reserve approval time by approximately 80% through a new workflow. Used Bloomberg and SEC data for treasury reporting and built tax-position dashboards.</p>
             </div>
           </li>
           <li>
             <span class="timeline-date">2022–2023</span>
-            <div class="timeline-entry"><p class="timeline-org">University of Wisconsin–Milwaukee · Lubar College of Business</p><h4>Graduate Teaching Assistant · Business Analytics</h4><p>Taught statistical modeling in BUS ADM 210 and 211, helping 450+ students use Excel, R, and statistics to answer business questions. Received the <a href="#recognition">Gold Star Teaching Award</a>.</p></div>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">UWM</span><img class="timeline-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/UWM-logo-2024.svg" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">University of Wisconsin–Milwaukee · Lubar College of Business</p><h4>Graduate Teaching Assistant · Business Analytics</h4><p>Taught statistical modeling in BUS ADM 210 and 211, helping 450+ students use Excel, R, and statistics to answer business questions. Received the <a href="#recognition">Gold Star Teaching Award</a>.</p></div>
           </li>
           <li>
             <span class="timeline-date">2020–2022</span>
-            <div class="timeline-entry"><p class="timeline-org">North Dakota State University</p><h4>Graduate Research Assistant</h4><p>Used machine learning and statistical methods in R, Python, and Stata to study firm-level innovation.</p></div>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">NDSU</span><img class="timeline-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/North_Dakota_State_University_wordmark.svg" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">North Dakota State University</p><h4>Graduate Research Assistant</h4><p>Used machine learning and statistical methods in R, Python, and Stata to study firm-level innovation.</p></div>
           </li>
           <li>
             <span class="timeline-date">2018–2020</span>
-            <div class="timeline-entry"><p class="timeline-org">Institute for Policy, Advocacy, and Governance (IPAG) · Bangladesh</p><h4>Research Analyst · Consulting &amp; Business Development</h4><p>Delivered quantitative analysis, financial models, and research reports for policy and consulting engagements, including work on South Asian trade barriers.</p></div>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">IPAG</span><img class="timeline-logo" src="https://www.google.com/s2/favicons?domain=ipag.org&sz=128" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">Institute for Policy, Advocacy, and Governance (IPAG) · Bangladesh</p><h4>Research Analyst · Consulting &amp; Business Development</h4><p>Delivered quantitative analysis, financial models, and research reports for policy and consulting engagements, including work on South Asian trade barriers.</p></div>
           </li>
           <li>
             <span class="timeline-date">2014–2018</span>
-            <div class="timeline-entry"><p class="timeline-org">NielsenMRB · Bangladesh</p><h4>Market Research Analyst</h4><p>Analyzed consumer and market data across product categories to inform client marketing and commercial decisions.</p></div>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">N</span><img class="timeline-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nielsen_logo.svg" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">NielsenMRB · Bangladesh</p><h4>Market Research Analyst</h4><p>Analyzed consumer and market data across product categories to inform client marketing and commercial decisions.</p></div>
           </li>
           <li>
             <span class="timeline-date">Earlier roles</span>
-            <div class="timeline-entry"><p class="timeline-org">Bangladesh Institute of Development Studies (BIDS)</p><h4>Research Assistant</h4><p>Supported economic and development research at the institute.</p></div>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">BIDS</span><img class="timeline-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Institute_of_Development_Studies_logo.png" alt="" loading="lazy" onerror="this.style.display='none'"><p class="timeline-org">Bangladesh Institute of Development Studies (BIDS)</p><h4>Research Assistant</h4><p>Supported economic and development research at the institute.</p></div>
           </li>
           <li>
             <span class="timeline-date">Earlier role</span>
-            <div class="timeline-entry"><p class="timeline-org">Rabbit’s Hat · Dhaka, Bangladesh</p><h4>Business Development Intern</h4><p>Supported business development at a software company building custom applications and digital products. <a href="https://www.linkedin.com/company/rabbit%27s-hat/posts/?feedView=all" target="_blank" rel="noopener noreferrer">Company page ↗</a></p></div>
+            <div class="timeline-entry"><span class="timeline-mark" aria-hidden="true">RH</span><p class="timeline-org">Rabbit’s Hat · Dhaka, Bangladesh</p><h4>Business Development Intern</h4><p>Supported business development at a software company building custom applications and digital products. <a href="https://www.linkedin.com/company/rabbit%27s-hat/posts/?feedView=all" target="_blank" rel="noopener noreferrer">Company page ↗</a></p></div>
           </li>
         </ol>
       </div>
