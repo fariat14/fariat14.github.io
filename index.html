@@ -68,6 +68,7 @@
     .about-copy p{font-size:17px;color:#615257;margin-bottom:20px}
     .about-copy p:last-child{margin-bottom:0}
     .dark-band{background:#f1e9e2}
+    .research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.conference-summary{margin-top:26px;padding:25px 28px;border-left:3px solid var(--wine);background:var(--tint)}.conference-summary h3{font:normal 24px Georgia,serif;margin:0 0 8px}.conference-summary p{margin:0;color:var(--muted)}
     .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .work-card,.project-card,.article,.education-item{background:var(--white);border:1px solid var(--line)}
     .work-card{padding:29px}
@@ -163,7 +164,7 @@
       main section{padding:66px 0}
       .section-head,.contact-inner{display:block}
       .section-intro{margin-top:18px}
-      .about-grid,.work-grid,.project-grid,.article-list,.education-list,.speaking-grid,.recognition-grid{grid-template-columns:1fr}
+      .about-grid,.research-grid,.work-grid,.project-grid,.article-list,.education-list,.speaking-grid,.recognition-grid{grid-template-columns:1fr}
       .dashboard-preview{height:260px}
       .metric{border-right:0;border-bottom:1px solid #77555d;padding:0 0 12px}
       .contact .actions{justify-content:flex-start;margin-top:24px}
@@ -211,8 +212,8 @@
     .work-card h3{font-family:Georgia,serif;font-size:24px}
     .recognition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     .contact .actions{min-width:270px;max-width:530px;justify-content:flex-end}
-    @media(max-width:850px){.work-grid{grid-template-columns:1fr 1fr}.work-card:nth-child(1){grid-column:auto}.featured{grid-template-columns:1fr}}
-    @media(max-width:620px){.nav-links{gap:8px 18px}.hero-grid{grid-template-columns:1fr;padding-top:52px}.hero .lead{font-size:28px}.portrait-frame{width:min(76%,320px)}.work-grid,.recognition-grid{grid-template-columns:1fr}.featured .feature-aside .metric{border-bottom:1px solid #77555d}.work-card:nth-child(1){grid-column:auto}main section{padding:64px 0}}
+    @media(max-width:850px){.research-grid{grid-template-columns:1fr 1fr}.work-grid{grid-template-columns:1fr 1fr}.work-card:nth-child(1){grid-column:auto}.featured{grid-template-columns:1fr}}
+    @media(max-width:620px){.research-grid{grid-template-columns:1fr}.nav-links{gap:8px 18px}.hero-grid{grid-template-columns:1fr;padding-top:52px}.hero .lead{font-size:28px}.portrait-frame{width:min(76%,320px)}.work-grid,.recognition-grid{grid-template-columns:1fr}.featured .feature-aside .metric{border-bottom:1px solid #77555d}.work-card:nth-child(1){grid-column:auto}main section{padding:64px 0}}
     .impact-strip{background:#f1e9e2;border-bottom:1px solid var(--line)}
     .impact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
     .impact-grid>div{padding:28px 36px;border-right:1px solid #e1d5ce}
@@ -381,12 +382,25 @@
               <li>Combined financial analysis with Power BI, Excel, and OneStream to support recurring controllership reviews and executive reporting.</li>
             </ul>
           </article>
-          <article class="work-card">
-            <p class="meta">Earlier experience</p>
-            <h3>Research and market analytics</h3>
-            <p>Conducted applied research at IPAG and North Dakota State University, analyzed consumer markets at Nielsen, and conducted research at UW–Milwaukee.</p>
-          </article>
+        </div>
+      </div>
+    </section>
 
+    <section id="research">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Applied research</p><h2>Research Experience</h2></div>
+          <p class="section-intro">My earlier work spans economic research and consumer market analysis in the United States and Bangladesh.</p>
+        </div>
+        <div class="research-grid">
+          <article class="work-card"><p class="meta">North Dakota State University</p><h3>Applied economics research</h3><p>Conducted research in applied economics, building experience with quantitative analysis and communicating findings.</p></article>
+          <article class="work-card"><p class="meta">IPAG · Bangladesh</p><h3>Think tank research</h3><p>Worked as a research analyst on policy and economic questions, including research on barriers to trade in South Asia’s ICT sector.</p></article>
+          <article class="work-card"><p class="meta">NielsenMRB · Bangladesh</p><h3>Market research</h3><p>Analyzed consumer and market research to help answer business questions.</p></article>
+        </div>
+        <div class="conference-summary">
+          <h3>Conference presentations</h3>
+          <p>Presented papers at the South Asian Economics Students’ Meet (SAESM), the NSU Economics Conference, and the World Business Conference.</p>
+          <a class="text-link" href="record/#conferences">See conference record ↗</a>
         </div>
       </div>
     </section>
