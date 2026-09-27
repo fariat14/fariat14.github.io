@@ -279,6 +279,8 @@
   @media(max-width:620px){.project-grid{grid-template-columns:1fr}.impact-grid{grid-template-columns:1fr 1fr}.impact-grid>div:last-child{grid-column:1/-1;padding-left:0}}
   .nav-links a[href="/record/"]{color:#e5c59b}
   @media(max-width:620px){.nav-links{flex-wrap:wrap;overflow:visible;gap:10px 18px;padding:4px 0}.nav-links a{font-size:14px}.nav-links .nav-contact{padding:4px 11px}}
+  #work .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#work .work-card:nth-child(1){grid-column:auto}
+  @media(max-width:620px){#work .work-grid{grid-template-columns:1fr}}
   </style>
   <script data-goatcounter="https://fariat14.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -288,7 +290,7 @@
     <nav class="nav wrap" aria-label="Primary navigation">
       <a class="brand" href="#main-content">Faria <span>T</span></a>
       <div class="nav-links">
-        <a href="#projects">Work</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#about">About</a><a href="/record/">Record</a><a class="nav-contact" href="#contact">Contact</a>
+        <a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="/record/">Record</a><a class="nav-contact" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -301,7 +303,7 @@
           <p class="lead">I map and validate ERP finance data into Snowflake so finance teams can trust what they report.</p>
           <p class="summary">I work across finance transformation, business intelligence, and applied research. My background in economics helps me ask better questions; SQL, modeling, and visual storytelling help me answer them.</p>
           <div class="actions">
-            <a class="button primary" href="#projects">Explore my work</a>
+            <a class="button primary" href="#work">Explore my work</a>
             <a class="button ghost" href="https://github.com/fariat14" target="_blank" rel="noopener noreferrer">GitHub projects ↗</a>
           </div>
           <p class="hero-note">Snowflake SQL / Power BI / Python / Tableau</p>
@@ -329,11 +331,11 @@
 
 
 
-    <section id="projects">
+    <section id="work" class="dark-band">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="kicker">Selected work</p><h2>Data work with a clear method</h2></div>
-          <p class="section-intro">Enterprise finance transformation and public models. Company data stays private; the public projects link to their methods and code.</p>
+          <div><p class="kicker">Enterprise work</p><h2>Work experience</h2></div>
+          <p class="section-intro">How I apply analysis inside organizations, from data definitions to decisions.</p>
         </div>
         <article class="featured">
           <div class="feature-copy">
@@ -342,7 +344,7 @@
             <div class="feature-detail"><strong>Data</strong><span>Defined source-to-target mappings across Oracle Fusion, SAP S/4HANA, iScala, YRF, and TRP into the Snowflake Enterprise Data Model.</span></div>
             <div class="feature-detail"><strong>Quality</strong><span>Wrote SQL validation checks, supported SIT and UAT, investigated defects with finance and engineering teams, and used Cortex AI to assist validation.</span></div>
             <div class="feature-detail"><strong>Impact</strong><span>Redesigned a reserve approval process, reducing processing time by approximately 80%.</span></div>
-            <a class="button primary" href="#work">See experience</a>
+            <a class="button primary" href="#projects">Explore projects</a>
           </div>
           <div class="feature-aside" aria-label="Enterprise work highlights">
             <p class="preview-label">Across the workflow</p>
@@ -351,6 +353,34 @@
             <div class="metric"><strong>03</strong><span>Resolve defects and improve finance processes</span></div>
           </div>
         </article>
+        <div class="work-grid">
+
+          <article class="work-card">
+            <p class="meta">Johnson Controls · Finance &amp; pricing</p>
+            <h3>Analytics and executive reporting</h3>
+            <p>Worked across controllership and central pricing to improve visibility into business performance.</p>
+            <ul>
+              <li>Supported pricing dashboards, scorecards, and monthly reporting for Executive Committee review.</li>
+              <li>Combined financial analysis with Power BI, Excel, and OneStream to support recurring controllership reviews and executive reporting.</li>
+            </ul>
+          </article>
+          <article class="work-card">
+            <p class="meta">Earlier experience</p>
+            <h3>Research and market analytics</h3>
+            <p>Conducted applied research at IPAG and North Dakota State University, analyzed consumer markets at Nielsen, and conducted research at UW–Milwaukee.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Public projects</p><h2>Projects</h2></div>
+          <p class="section-intro">Models and dashboards built with public data. Follow the links for methods, code, and interactive views.</p>
+        </div>
+
         <div class="project-grid">
           <article class="project-card">
             <p class="meta">Predictive modeling · Python</p>
@@ -377,41 +407,6 @@
             <a href="https://public.tableau.com/views/citibiketrips_15935502394800/Feb2018?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener noreferrer">Citi Bike · Tableau ↗</a>
             <a href="https://public.tableau.com/views/GDPpercountrycomparison_15935581138140/Dashboard1?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener noreferrer">GDP by country · Tableau ↗</a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="dark-band">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="kicker">Experience</p><h2>Selected work</h2></div>
-          <p class="section-intro">How I apply analysis inside organizations, from data definitions to decisions.</p>
-        </div>
-        <div class="work-grid">
-          <article class="work-card">
-            <p class="meta">Johnson Controls · Finance transformation</p>
-            <h3>Data Analyst, Global Products OTC Finance</h3>
-            <p>Supporting enterprise data mapping and validation across ERP systems and downstream analytics.</p>
-            <ul>
-              <li>Map source fields and transformation rules across Oracle Fusion, SAP S/4HANA, iScala, YRF, and TRP into the Snowflake Enterprise Data Model.</li>
-              <li>Validate Snowflake data with SQL and Cortex AI during SIT and UAT; coordinate defect resolution with finance and engineering teams.</li>
-            </ul>
-          </article>
-          <article class="work-card">
-            <p class="meta">Johnson Controls · Finance &amp; pricing</p>
-            <h3>Analytics and executive reporting</h3>
-            <p>Worked across controllership and central pricing to improve visibility into business performance.</p>
-            <ul>
-              <li>Supported pricing dashboards, scorecards, and monthly reporting for Executive Committee review.</li>
-              <li>Combined financial analysis with Power BI, Excel, OneStream, and enterprise reporting workflows; built a reserve approval process that cut processing time by approximately 80%.</li>
-            </ul>
-          </article>
-          <article class="work-card">
-            <p class="meta">Earlier experience</p>
-            <h3>Research and market analytics</h3>
-            <p>Conducted applied research at IPAG and North Dakota State University, analyzed consumer markets at Nielsen, and conducted research at UW–Milwaukee.</p>
-          </article>
-
         </div>
       </div>
     </section>
