@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Add churn project card
-        shell: python
         run: |
+          python - <<'PY'
           from pathlib import Path
           p = Path('index.html')
           text = p.read_text()
@@ -35,8 +35,8 @@ jobs:
 '''
           if marker not in text:
               raise SystemExit('Project insertion point not found')
-          text = text.replace(marker, card + marker, 1)
-          p.write_text(text)
+          p.write_text(text.replace(marker, card + marker, 1))
+          PY
       - name: Commit portfolio update
         run: |
           git config user.name "github-actions[bot]"
