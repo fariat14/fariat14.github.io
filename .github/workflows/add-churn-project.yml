@@ -21,10 +21,16 @@ jobs:
           text = p.read_text()
           if 'customer-churn-prediction' in text:
               raise SystemExit('Churn project already present')
-          marker = '''          <article class="project-card">
-            <p class="meta">Applied machine learning · World Bank data</p>
-            <h3>Firm Innovation in Bangladesh</h3>'''
-          card = '''          <article class="project-card">
+          target = '<p class="meta">Applied machine learning · World Bank data</p>'
+          idx = text.find(target)
+          if idx == -1:
+              raise SystemExit('Project insertion point not found')
+          start = text.rfind('<article class="project-card">', 0, idx)
+          if start == -1:
+              raise SystemExit('Project card start not found')
+          indent_start = text.rfind('\n', 0, start) + 1
+          indent = text[indent_start:start]
+          card = indent + '''<article class="project-card">
             <p class="meta">Machine learning · Customer analytics · Python</p>
             <h3>Customer Churn: From Prediction to Retention Profit</h3>
             <p class="project-question">Which customers are actually worth trying to save?</p>
@@ -33,9 +39,7 @@ jobs:
             <a class="text-link" href="https://github.com/fariat14/customer-churn-prediction" target="_blank" rel="noopener noreferrer">Read project and code</a>
           </article>
           '''
-          if marker not in text:
-              raise SystemExit('Project insertion point not found')
-          p.write_text(text.replace(marker, card + marker, 1))
+          p.write_text(text[:indent_start] + card + text[indent_start:])
           PY
       - name: Commit portfolio update
         run: |
