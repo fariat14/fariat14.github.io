@@ -21,17 +21,17 @@ jobs:
           text = p.read_text()
           marker = '</style>'
           css = '''
-    /* Align comparable content across side-by-side project cards */
-    @media(min-width:851px){
-      #projects .project-card{display:flex;flex-direction:column}
-      #projects .project-card .meta{min-height:38px}
-      #projects .project-card h3{min-height:64px;margin-bottom:12px}
-      #projects .project-card .project-question{min-height:56px;margin:10px 0 16px}
-      #projects .project-card>p:not(.meta):not(.project-question):not(.note){min-height:165px}
-      #projects .project-card .stack{min-height:92px;align-content:flex-start}
-      #projects .project-card .text-link{align-self:flex-start}
-    }
-'''
+          /* Align comparable content across side-by-side project cards */
+          @media(min-width:851px){
+            #projects .project-card{display:flex;flex-direction:column}
+            #projects .project-card .meta{min-height:38px}
+            #projects .project-card h3{min-height:64px;margin-bottom:12px}
+            #projects .project-card .project-question{min-height:56px;margin:10px 0 16px}
+            #projects .project-card>p:not(.meta):not(.project-question):not(.note){min-height:165px}
+            #projects .project-card .stack{min-height:92px;align-content:flex-start}
+            #projects .project-card .text-link{align-self:flex-start}
+          }
+          '''
           if 'Align comparable content across side-by-side project cards' not in text:
               if marker not in text:
                   raise SystemExit('style end marker not found')
