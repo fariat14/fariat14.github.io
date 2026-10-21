@@ -1,0 +1,46 @@
+name: Add customer churn project
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-churn-project.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add churn project card
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          text = p.read_text()
+          if 'customer-churn-prediction' in text:
+              raise SystemExit('Churn project already present')
+          marker = '''          <article class="project-card">
+            <p class="meta">Applied machine learning · World Bank data</p>
+            <h3>Firm Innovation in Bangladesh</h3>'''
+          card = '''          <article class="project-card">
+            <p class="meta">Machine learning · Customer analytics · Python</p>
+            <h3>Customer Churn: From Prediction to Retention Profit</h3>
+            <p class="project-question">Which customers are actually worth trying to save?</p>
+            <p>Compared 11 classification models on 7,043 telecom customers and selected a well-calibrated logistic regression with 0.849 test ROC-AUC. Then moved beyond churn prediction to customer-level decisioning: expected-value targeting produced about $5,600 in simulated campaign profit versus about $600 from ranking customers by churn risk alone under the base assumptions.</p>
+            <div class="stack"><span>Python</span><span>scikit-learn</span><span>Machine learning</span><span>Customer analytics</span><span>Decision modeling</span></div>
+            <a class="text-link" href="https://github.com/fariat14/customer-churn-prediction" target="_blank" rel="noopener noreferrer">Read project and code</a>
+          </article>
+'''
+          if marker not in text:
+              raise SystemExit('Project insertion point not found')
+          text = text.replace(marker, card + marker, 1)
+          p.write_text(text)
+      - name: Commit portfolio update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Add customer churn project to portfolio"
+          git push
