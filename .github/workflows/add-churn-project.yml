@@ -2,8 +2,6 @@ name: Add customer churn project
 
 on:
   push:
-    paths:
-      - '.github/workflows/add-churn-project.yml'
 
 permissions:
   contents: write
@@ -20,7 +18,7 @@ jobs:
           p = Path('index.html')
           text = p.read_text()
           if 'customer-churn-prediction' in text:
-              raise SystemExit('Churn project already present')
+              raise SystemExit(0)
           target = '<p class="meta">Applied machine learning · World Bank data</p>'
           idx = text.find(target)
           if idx == -1:
@@ -43,6 +41,7 @@ jobs:
           PY
       - name: Commit portfolio update
         run: |
+          if git diff --quiet -- index.html; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
