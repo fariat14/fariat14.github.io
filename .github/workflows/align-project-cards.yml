@@ -13,12 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Add project card alignment CSS
+      - name: Align cards and add Medium link
         run: |
           python - <<'PY'
           from pathlib import Path
           p = Path('index.html')
           text = p.read_text()
+
           marker = '</style>'
           css = '''
           /* Align comparable content across side-by-side project cards */
@@ -36,7 +37,15 @@ jobs:
               if marker not in text:
                   raise SystemExit('style end marker not found')
               text = text.replace(marker, css + marker, 1)
-              p.write_text(text)
+
+          github = '<a class="text-link" href="https://github.com/fariat14/bangladesh-innovation-ml" target="_blank" rel="noopener noreferrer">GitHub</a>'
+          medium = '<a class="text-link" href="https://medium.com/@fariatabassum1/what-drives-innovation-in-bangladeshi-business-1faecba11172?sharedUserId=fariatabassum1" target="_blank" rel="noopener noreferrer">Medium</a>'
+          if medium not in text:
+              if github not in text:
+                  raise SystemExit('Firm innovation GitHub link not found')
+              text = text.replace(github, github + '\n            ' + medium, 1)
+
+          p.write_text(text)
           PY
       - name: Commit changes
         run: |
@@ -44,5 +53,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Align project card spacing"
+          git commit -m "Align project cards and add Medium link"
           git push
